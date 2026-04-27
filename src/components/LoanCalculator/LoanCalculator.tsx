@@ -52,6 +52,7 @@ const LoanCalculator = forwardRef<HTMLDivElement, LoanCalculatorProps>(({ showLo
                     setMonthlyPayment(response.data.paymentAmountMonthly + " €");
                     setError(null);
                 } else {
+                    console.error(response.status);
                     setError("Oops, something went wrong");
                 }
                 setLoading(false);

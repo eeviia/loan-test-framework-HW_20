@@ -19,7 +19,7 @@ const LoanPage: React.FC<LoanCalculatorProps> = ({showLoginPopup}) => {
         <ImageElement id={'image-1'}
                       buttonText={'Apply for loan'}
                       imageRef={'photo-1.jpg'}
-                      onClickButton={scrollToElement(loanCalculatorRef)}/>
+                      onClickButton={() => loanCalculatorRef.current?.scrollIntoView({behavior: 'smooth'})}/>
         <ImageElement id={'image-2'}
                       buttonText={'Apply for loan'}
                       imageRef={'photo-2.jpg'}
